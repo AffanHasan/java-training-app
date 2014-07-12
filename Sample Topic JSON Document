@@ -1,0 +1,22 @@
+/*
+The Reference TOPIC
+----------------------------
+
+Fields marked with '*' in comments are mandatory fields
+
+*/
+{
+"_id" : 123,//*
+
+"name"	 : "JVM",//* Name should be in the form that it should be search friendly & can be indexed
+
+"tags"	 : [//* Small cased
+ 	 "jvm",
+ 	 "java virtual machine"
+ ],
+ 
+//* Will be useful when providing an overview to the user while searching for the topics
+"description"	 : "A software Virtual Machine; provides the run-time environment for running JAVA based applications...",
+
+"content"	 : "<h1>JVM</h1><hr>"
+}
