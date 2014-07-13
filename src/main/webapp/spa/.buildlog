@@ -1,0 +1,94 @@
+---
+build.dart --machine --full
+
+build.dart finished [2051 ms]
+
+---
+build.dart --machine --changed=web\spa.html
+[{"method":"warning","params":{"file":"web/spa.html","message":"couldn't find imported asset \"web/engine/web_components/web_components.html\" in package \"spa\".","line":9,"charStart":216,"charEnd":284}}]
+[{"method":"warning","params":{"file":"web/spa.html","message":"definition for Polymer element with tag name \"tutorial-topic\" not found.","line":12,"charStart":308,"charEnd":324}}]
+build.dart finished [1456 ms]
+
+---
+build.dart --machine --changed=pubspec.lock
+[{"method":"warning","params":{"file":"web/spa.html","message":"couldn't find imported asset \"web/engine/web_components/web_components.html\" in package \"spa\".","line":9,"charStart":216,"charEnd":284}}]
+[{"method":"warning","params":{"file":"web/spa.html","message":"definition for Polymer element with tag name \"tutorial-topic\" not found.","line":12,"charStart":308,"charEnd":324}}]
+build.dart finished [1380 ms]
+
+---
+build.dart --machine --changed=pubspec.lock
+[{"method":"warning","params":{"file":"web/spa.html","message":"couldn't find imported asset \"web/engine/web_components/web_components.html\" in package \"spa\".","line":9,"charStart":216,"charEnd":284}}]
+[{"method":"warning","params":{"file":"web/spa.html","message":"definition for Polymer element with tag name \"tutorial-topic\" not found.","line":12,"charStart":308,"charEnd":324}}]
+build.dart finished [1411 ms]
+
+---
+build.dart --machine --changed=web\engine\web_components\web_components.dart
+[{"method":"warning","params":{"file":"web/spa.html","message":"couldn't find imported asset \"web/engine/web_components/web_components.html\" in package \"spa\".","line":9,"charStart":216,"charEnd":284}}]
+[{"method":"warning","params":{"file":"web/spa.html","message":"definition for Polymer element with tag name \"tutorial-topic\" not found.","line":12,"charStart":308,"charEnd":324}}]
+build.dart finished [1448 ms]
+
+---
+build.dart --machine --removed=web\engine\web_components\web_components.dart
+[{"method":"warning","params":{"file":"web/spa.html","message":"couldn't find imported asset \"web/engine/web_components/web_components.html\" in package \"spa\".","line":9,"charStart":216,"charEnd":284}}]
+[{"method":"warning","params":{"file":"web/spa.html","message":"definition for Polymer element with tag name \"tutorial-topic\" not found.","line":12,"charStart":308,"charEnd":324}}]
+build.dart finished [1382 ms]
+
+---
+build.dart --machine --changed=web\engine\web_components\web_components.html
+[{"method":"warning","params":{"file":"web/spa.html","message":"definition for Polymer element with tag name \"tutorial-topic\" not found.","line":12,"charStart":308,"charEnd":324}}]
+build.dart finished [1304 ms]
+
+---
+build.dart --machine --changed=web\engine\web_components\web_components.html
+[{"method":"warning","params":{"file":"web/engine/web_components/web_components.html","message":"couldn't find imported asset \"web/engine/web_components/tutorial_topic/tutorial-topic.html\" in package \"spa\".","line":2,"charStart":34,"charEnd":95}}]
+[{"method":"warning","params":{"file":"web/spa.html","message":"definition for Polymer element with tag name \"tutorial-topic\" not found.","line":12,"charStart":308,"charEnd":324}}]
+build.dart finished [1384 ms]
+
+---
+build.dart --machine --changed=web\engine\web_components\web_components.html
+[{"method":"warning","params":{"file":"web/engine/web_components/web_components.html","message":"couldn't find imported asset \"web/engine/web_components/tutorial_topic/tutorial-topic.html\" in package \"spa\".","line":2,"charStart":34,"charEnd":95}}]
+[{"method":"warning","params":{"file":"web/spa.html","message":"definition for Polymer element with tag name \"tutorial-topic\" not found.","line":12,"charStart":308,"charEnd":324}}]
+build.dart finished [1516 ms]
+
+---
+build.dart --machine --changed=pubspec.lock
+[{"method":"warning","params":{"file":"web/engine/web_components/web_components.html","message":"couldn't find imported asset \"web/engine/web_components/tutorial_topic/tutorial-topic.html\" in package \"spa\".","line":2,"charStart":34,"charEnd":95}}]
+[{"method":"warning","params":{"file":"web/spa.html","message":"definition for Polymer element with tag name \"tutorial-topic\" not found.","line":12,"charStart":308,"charEnd":324}}]
+build.dart finished [1390 ms]
+
+---
+build.dart --machine --changed=web\engine\web_components\tutorial_topic\tutorial-topic.dart
+[{"method":"warning","params":{"file":"web/engine/web_components/web_components.html","message":"couldn't find imported asset \"web/engine/web_components/tutorial_topic/tutorial-topic.html\" in package \"spa\".","line":2,"charStart":34,"charEnd":95}}]
+[{"method":"warning","params":{"file":"web/spa.html","message":"definition for Polymer element with tag name \"tutorial-topic\" not found.","line":12,"charStart":308,"charEnd":324}}]
+build.dart finished [1353 ms]
+
+---
+build.dart --machine --changed=web\engine\web_components\tutorial_topic\tutorial-topic.html
+[{"method":"warning","params":{"file":"web/spa.html","message":"definition for Polymer element with tag name \"tutorial-topic\" not found.","line":12,"charStart":308,"charEnd":324}}]
+build.dart finished [1792 ms]
+
+---
+build.dart --machine --changed=web\engine\web_components\tutorial_topic\tutorial-topic.dart
+[{"method":"warning","params":{"file":"web/spa.html","message":"definition for Polymer element with tag name \"tutorial-topic\" not found.","line":12,"charStart":308,"charEnd":324}}]
+build.dart finished [1372 ms]
+
+---
+build.dart --machine --changed=web\engine\web_components\tutorial_topic\tutorial-topic.html
+
+build.dart finished [1596 ms]
+
+---
+build.dart --machine --changed=pubspec.lock
+
+build.dart finished [1448 ms]
+
+---
+build.dart --machine --full
+
+build.dart finished [2108 ms]
+
+---
+build.dart --machine --changed=web\engine\images\JVM-Languages.png
+
+build.dart finished [1556 ms]
+
