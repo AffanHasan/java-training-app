@@ -18,5 +18,13 @@ Fields marked with '*' in comments are mandatory fields
 //* Will be useful when providing an overview to the user while searching for the topics
 "description"	 : "A software Virtual Machine; provides the run-time environment for running JAVA based applications...",
 
-"content"	 : "<h1>JVM</h1><hr>"
+"content"	 : "<h1>JVM</h1><hr>",
+
+"comments"         : [
+                       {
+                        "name"   : "Saeed Ghani",
+                        "email"  : "saeedghani@gmail.com",
+                        "content": "Hallo come to Dolemn Mall at my shop eid sale there...!"
+                       }
+                     ]
 }
