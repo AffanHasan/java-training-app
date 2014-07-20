@@ -21,11 +21,27 @@ Fields marked with '*' in comments are mandatory fields
 //* The Html fragment
 "content"	 : "<h1>JVM</h1><hr>",
 
+//The Html fragment representing the 'Table Of Contents'
+"toc"      : "<div>...</div>",
+
+//These are visitor comments
 "comments"         : [
                        {
                         "name"   : "Saeed Ghani",
                         "email"  : "saeedghani@gmail.com",
                         "content": "Hallo come to Dolemn Mall at my shop eid sale there...!"
+                       }
+                     ],
+                     
+//These are the questions which are created by the document author
+"questions"        : [
+                       {
+                         "?"  : "",
+                         "ans": ""
+                       },
+                       {
+                         "?"  : "",
+                         "ans": ""
                        }
                      ]
 }
