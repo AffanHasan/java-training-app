@@ -25,7 +25,14 @@ class TopicCRUD extends PolymerElement  {
   
 //---Event handlers Starts
   void submitTopicEH(Event e, var detail, Node target){
-    
+    e.preventDefault();
+    _logger.info("Making a request");
+    var request = new HttpRequest();
+    request.onReadyStateChange.listen((response){
+      
+    });
+    request.open('POST', '/java-training-app/topicCRUD');
+    request.send();
   }
 //---Event handlers Ends
 }

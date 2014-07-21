@@ -21,7 +21,14 @@ public class TopicCRUDServlet extends HttpServlet{
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp)
 			throws ServletException, IOException {
+		System.out.println("Inside doGet method");
 		PrintWriter out = resp.getWriter();
 		out.println("<h1>HAllo</h1>");
+	}
+	
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp)
+			throws ServletException, IOException {
+		System.out.println("Inside doPost method");
 	}
 }
