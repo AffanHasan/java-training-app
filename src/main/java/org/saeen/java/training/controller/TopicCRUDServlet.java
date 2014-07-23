@@ -2,6 +2,7 @@ package org.saeen.java.training.controller;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.Map;
 import java.util.logging.Logger;
 
 import javax.inject.Inject;
@@ -21,6 +22,9 @@ public class TopicCRUDServlet extends HttpServlet{
 	 * 
 	 */
 	private static final long serialVersionUID = -1112089948529142653L;
+	
+//	@Inject
+//	private DB dbConnection;
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp)
@@ -33,10 +37,14 @@ public class TopicCRUDServlet extends HttpServlet{
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp)
 			throws ServletException, IOException {
-		
+		logger.info("Inside doPost method");
 		switch(req.getParameter("action")){
 			case "submit_topic":
-				
+				logger.info(req.getParameter("topicDocument"));
+//				BasicDBObject obj;
+//				new Basicd
+//				
+//				dbConnection.getCollection(req.getParameter("category")).save(null);
 				break;
 		}
 	}

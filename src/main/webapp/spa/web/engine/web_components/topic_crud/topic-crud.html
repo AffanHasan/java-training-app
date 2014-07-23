@@ -8,12 +8,16 @@
     </style>
     <form method="get" action="topicCRUD">
       <!-- Topic Name -->
-      <div class="topic_section"><input id="topic-name" placeholder="Topic Name" value="{{ topic['name'] }}"></div>
+      <div class="topic_section">
+        <input id="topic-name" placeholder="Topic Name" value="{{ topic['name'] }}">
+        <select id="topic-category"> 
+            <option template repeat="{{ category in topicCategories }}">{{category}}</option>
+        </select>
+      </div>
       <!-- Topic Search Tags -->
       <div class="topic_section">
         <fieldset>
-          <legend>Topic Search Tags</legend>
-          <input id="tag-name" placeholder="Enter tag name to add" on-change="{{ addTopicTagEH }}">
+          <legend><input id="tag-name" placeholder="Enter tag name to add" on-change="{{ addTopicTagEH }}"></legend>
           <ul>
             <template repeat="{{ tag in topic['tags'] }}">
               <li>{{ tag }}</li>
@@ -25,7 +29,7 @@
       <div class="topic_section"><textarea on-change="{{ addTopicDescriptionEH }}" id="topic-description" placeholder="Topic Description"></textarea></div>
       <!-- Topic Content -->
       <div class="topic_section">
-        <label for="topic-content"><h1>Topic Content</h1></label>
+        <label for="topic-content"><h1>Content</h1></label>
         <textarea id="topic-content" rows="10" cols="80"></textarea>
       </div>
       <!-- Topic Quesitons -->

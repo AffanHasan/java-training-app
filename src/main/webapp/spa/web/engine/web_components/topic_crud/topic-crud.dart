@@ -13,6 +13,9 @@ class TopicCRUD extends PolymerElement {
    */
   @observable
   Map topic = toObservable({ "name" : "", "tags" : [], "description" : "", "content" : "", "comments" : [], "questions" : "" });
+  
+  @observable
+  List get topicCategories => [ "SE", "EE" ];
 
   //Default Constructor
   TopicCRUD.created() : super.created() {
@@ -37,10 +40,12 @@ class TopicCRUD extends PolymerElement {
   void submitTopicEH(Event e, var detail, Node target){
     e.preventDefault();
     //Get the topic content editor JSON object (JsObject)
-    var topicContentEditorJsObject = js.context["CKEDITOR"]["instances"]["topic-content"];
-    topic['content'] = topicContentEditorJsObject.callMethod("getData", null);//Extracting the CKEditor html fragment
+    js.JsObject topicContentEditorJsObject = js.context["CKEDITOR"]["instances"]["topic-content"];
+    topic['content'] = topicContentEditorJsObject.callMethod("getData", []);//Extracting the CKEditor html fragment
+    SelectElement categorySelect = $['topic-category'];
     //Making a request to server and posting the topic document
-    HttpRequest.postFormData('/java-training-app/topicCRUD', { "action" : "submit_topic", "topicDocument" : topic });
+    _logger.info(topic.toString());
+    HttpRequest.postFormData("/java-training-app/topicCRUD", { "action" : "submit_topic", "category" : categorySelect.value, "topicDocument" : topic.toString() });
   }
   void addTopicTagEH(Event e, var detail, Node target){
     topic['tags'].add(target.value.toLowerCase());//Tag is always lower cased
