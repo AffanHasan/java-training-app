@@ -2,16 +2,20 @@ package org.saeen.java.training.controller;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.logging.Logger;
 
+import javax.inject.Inject;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.ws.rs.core.Response;
 
 @WebServlet("/topicCRUD")
 public class TopicCRUDServlet extends HttpServlet{
+	
+	@Inject
+	private Logger logger;
 
 	/**
 	 * 
@@ -29,6 +33,11 @@ public class TopicCRUDServlet extends HttpServlet{
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp)
 			throws ServletException, IOException {
-		System.out.println("Inside doPost method");
+		
+		switch(req.getParameter("action")){
+			case "submit_topic":
+				
+				break;
+		}
 	}
 }

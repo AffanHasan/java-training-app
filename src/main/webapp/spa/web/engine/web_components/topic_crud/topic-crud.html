@@ -1,19 +1,33 @@
 <link rel="import" href="../packages/polymer/polymer.html">
 <polymer-element name="topic-crud">
   <template>
+    <style>
+      .topic_section{
+        margin: 9px;
+      }
+    </style>
     <form method="get" action="topicCRUD">
       <!-- Topic Name -->
-      <input id="topic-name" placeholder="Topic Name" value="{{ topic['name'] }}">
+      <div class="topic_section"><input id="topic-name" placeholder="Topic Name" value="{{ topic['name'] }}"></div>
       <!-- Topic Search Tags -->
-      <label for="tag-name">Add Topic Search Tags</label>
-      <input id="tag-name" placeholder="Enter Tag Name">
-      <button id="add-tag-btn">Add</button>
-      <textarea id="search-tags-list" readonly="readonly"></textarea>
+      <div class="topic_section">
+        <fieldset>
+          <legend>Topic Search Tags</legend>
+          <input id="tag-name" placeholder="Enter tag name to add" on-change="{{ addTopicTagEH }}">
+          <ul>
+            <template repeat="{{ tag in topic['tags'] }}">
+              <li>{{ tag }}</li>
+            </template>
+          </ul>
+        </fieldset>
+      </div>
       <!-- Topic Description -->
-      <textarea id="topic-description" placeholder="Topic Description"></textarea>
+      <div class="topic_section"><textarea on-change="{{ addTopicDescriptionEH }}" id="topic-description" placeholder="Topic Description"></textarea></div>
       <!-- Topic Content -->
-      <label for="topic-content"><h1>Topic Content</h1></label>
-      <textarea id="topic-content" rows="10" cols="80"></textarea>
+      <div class="topic_section">
+        <label for="topic-content"><h1>Topic Content</h1></label>
+        <textarea id="topic-content" rows="10" cols="80"></textarea>
+      </div>
       <!-- Topic Quesitons -->
       <!-- Submit Topic Button -->
       <button id="submit-topic" on-click="{{submitTopicEH}}">Submit Topic</button>
