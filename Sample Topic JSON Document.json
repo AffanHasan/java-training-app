@@ -10,6 +10,8 @@ Fields marked with '*' in comments are mandatory fields
 
 "name"	 : "JVM",//* Name should be in the form that it should be search friendly & can be indexed
 
+"category" : "SE OR EE",
+
 "tags"	 : [//* Small cased
  	 "jvm",
  	 "java virtual machine"
